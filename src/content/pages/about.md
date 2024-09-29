@@ -4,40 +4,34 @@ seo:
   title: About Me
   description: Learn more about the person behind the website and embark on a journey of inspiration and shared experiences.
   image:
-    src: '/about.jpeg'
-    alt: A person sitting at a desk in front of a computer
+    src: "/about.jpg"
+    alt: Dayana looking at the Univeristy of Ghent HQ
 ---
 
-![Alt text for image](/about.jpeg)
+![Dayana looking at the Univeristy of Ghent HQ](/about.jpg)
 
-**Note!:** This about page is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+## Dayana Abuin Rios - Language Technology and Marketing Specialist
 
-## Ethan Donovan - Web Developer based in Estonia
-
-**Greetings!** I'm Ethan Donovan, a passionate web developer residing in the picturesque landscapes of [Estonia](https://en.wikipedia.org/wiki/Estonia). With a keen eye for design and a love for crafting seamless digital experiences, I bring a unique blend of creativity and technical expertise to the world of web development.
+**Greetings!** I'm Dayana Abuin Rios, a passionate language and marketing specialist living amidst the beautiful landscapes of [Spain](https://https://en.wikipedia.org/wiki/Spain). With a sharp eye for content revision, a talent for copywriting, and a passion for creating seamless digital experiences, I combine creativity with technical expertise to bring unique value to the world of Marketing.
 
 ## Skills and Expertise
 
-I specialize in front-end and back-end development, utilizing the latest technologies to build responsive and user-friendly websites. My proficiency includes **HTML**, **CSS**, **JavaScript**, and frameworks such as **Astro.js** for dynamic and interactive user interfaces. On the server side, I'm well-versed in Node.js and have experience with database management systems like MongoDB.
+I specialize in language technologies, localization, and multilingual communication, leveraging cutting-edge tools to drive growth through personalized marketing campaigns. My expertise includes SEO and SEM strategies that enhance online visibility and engagement. I am proficient in **CSS** and **HTML**, allowing me to create visually appealing and user-friendly content. Additionally, I have experience with **CMS**, enabling me to design targeted campaigns that resonate with diverse audiences. My skills in analytics and **A/B testing** further empower me to refine content strategies and maximize ROI.
 
 ## Innovation and Problem-Solving
 
-I thrive on solving complex problems and transforming ideas into functional, elegant websites. Whether it's optimizing performance, implementing new features, or troubleshooting issues, I approach each challenge with enthusiasm and a commitment to delivering high-quality solutions.
-
-## Global Perspective, Local Impact
-
-Living in Estonia has not only influenced my appreciation for nature and culture but has also shaped my approach to web development. I understand the importance of creating digital solutions that resonate with local audiences while maintaining a global perspective.
+I thrive on crafting engaging content and impactful marketing campaigns. Whether it’s optimizing audience engagement, developing innovative strategies, or resolving challenges, I tackle each project with enthusiasm and a commitment to delivering creative, high-quality solutions that drive results.
 
 ## Continuous Learning
 
-The dynamic nature of the tech industry inspires me to stay up-to-date with the latest trends and advancements. I'm always eager to expand my skill set and embrace emerging technologies that enhance the functionality and aesthetics of the websites I create.
+The ever-evolving landscape of digital marketing inspires me to stay informed about the latest trends and innovations. I am always eager to expand my skill set and embrace emerging technologies that enhance the effectiveness and visual appeal of my marketing campaigns, ensuring they resonate with audiences and drive engagement.
 
 ## Collaboration and Communication
 
-I believe in the power of collaboration and effective communication. Whether working with clients, designers, or fellow developers, I value clear communication to ensure the success of every project.
+I believe in the power of collaboration and effective communication in driving successful marketing initiatives. Whether partnering with clients, creative teams, or stakeholders, I prioritize transparent communication to align goals and strategies, ensuring that every campaign resonates with the target audience and delivers measurable results.
 
 ## Get in Touch
 
-Are you looking to elevate your online presence or bring your digital ideas to life? I'd love to hear from you! Feel free to reach out for collaboration, consultation, or just a friendly chat about all things web development.
+Are you ready to elevate your brand’s online presence and transform your digital ideas into impactful marketing strategies? I’d love to connect! Whether you’re interested in collaboration, consultation, or simply discussing the latest trends in marketing, feel free to reach out.
 
-_Let's build something amazing together!_
+_Let’s create something remarkable together!_
