@@ -14,5 +14,16 @@ export default {
         jsxSingleQuote: true,
       },
     },
+    {
+      files: "*.mdx",
+      options: {
+        singleQuote: true,
+        parser: "mdx",
+        trailingComma: "none",
+        tabWidth: 2,
+        semi: false,
+        jsxSingleQuote: true,
+      },
+    },
   ],
 };
