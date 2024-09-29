@@ -1,0 +1,80 @@
+---
+import CloseIcon from '@/icons/CloseIcon.astro'
+import { Image } from 'astro:assets'
+---
+
+<div
+  x-data="{ open: false, imageUrl: '' }"
+  @keydown.window.escape='open = false'
+>
+  <!-- Galería de imágenes en grid -->
+  <div class='grid grid-cols-1 gap-4 md:grid-cols-2'>
+    <div class='col-span-1'>
+      <Image
+        @click="open = true; imageUrl = '/public/project-1-Suggested FB Campaign_1.jpg'; document.body.classList.add('overflow-hidden')"
+        src='/public/project-1-Suggested FB Campaign_1.jpg'
+        alt='Imagen 1'
+        class='w-full h-auto cursor-pointer hover:scale-105 transition-transform'
+        width={200}
+        height={200}
+      />
+    </div>
+    <div class='col-span-1'>
+      <Image
+        @click="open = true; imageUrl = '/public/project-1-Suggested FB Campaign_2.jpg'; document.body.classList.add('overflow-hidden')"
+        src='/public/project-1-Suggested FB Campaign_2.jpg'
+        alt='Imagen 2'
+        class='w-full h-auto cursor-pointer hover:scale-105 transition-transform'
+        width={200}
+        height={200}
+      />
+    </div>
+    <div class='col-span-1'>
+      <Image
+        @click="open = true; imageUrl = '/public/project-1-Suggested FB Campaign_3.jpg'; document.body.classList.add('overflow-hidden')"
+        src='/public/project-1-Suggested FB Campaign_3.jpg'
+        alt='Imagen 3'
+        class='w-full h-auto cursor-pointer hover:scale-105 transition-transform'
+        width={200}
+        height={200}
+      />
+    </div>
+    <div class='col-span-1 md:col-span-2 lg:col-span-1'>
+      <Image
+        @click="open = true; imageUrl = '/public/project-1-Suggested FB Campaign_4.jpg'; document.body.classList.add('overflow-hidden')"
+        src='/public/project-1-Suggested FB Campaign_4.jpg'
+        alt='Imagen 4'
+        class='w-full h-auto cursor-pointer hover:scale-105 transition-transform'
+        width={200}
+        height={200}
+      />
+    </div>
+  </div>
+
+  <!-- Dialog de pantalla completa -->
+  <dialog
+    x-ref='dialog'
+    x-show='open'
+    class='fixed inset-0 w-full h-full bg-black bg-opacity-80 flex items-center justify-center z-50'
+  >
+    <div
+      @click.stop
+      class='relative max-w-3xl mx-auto p-4'
+      @click.outside="open = false; $refs.dialog.close(); document.body.classList.remove('overflow-hidden')"
+    >
+      <img
+        :src='imageUrl'
+        alt='Imagen en pantalla completa'
+        class='rounded-lg max-h-[90vh] max-w-full object-contain'
+        width={800}
+        height={600}
+      />
+      <button
+        @click="open = false; $refs.dialog.close(); document.body.classList.remove('overflow-hidden')"
+        class='absolute top-4 right-4 text-white hover:text-gray-400 transition size-5'
+      >
+        <CloseIcon />
+      </button>
+    </div>
+  </dialog>
+</div>
