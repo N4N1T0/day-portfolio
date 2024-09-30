@@ -56,12 +56,8 @@ const siteConfig: SiteConfig = {
       href: "/projects",
     },
     {
-      text: "Writing Styles",
-      href: "/writing",
-    },
-    {
       text: "Download CV",
-      href: "/experience",
+      href: "Dayana_Abuin_Rios_CV.pdf",
     },
     {
       text: "Blog",

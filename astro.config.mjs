@@ -7,7 +7,9 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: process.env.CI
+    ? "https://www.adrian-alvarez.dev"
+    : "http://localhost:4321",
   integrations: [
     mdx(),
     sitemap(),
