@@ -1,25 +1,35 @@
 ---
 import siteConfig from '@/data/site-config'
+import Rss from '@/icons/Rss.astro'
 
 const socialLinks = siteConfig.socialLinks || []
 const navLinks = siteConfig.footerNavLinks || []
 ---
 
 <footer class='w-full max-w-3xl mx-auto pt-12 pb-10 sm:pt-24 sm:pb-14'>
-  {
-    navLinks.length > 0 && (
-      <div class='mb-4 flex flex-wrap gap-x-6 gap-y-1'>
-        {navLinks.map((link) => (
-          <a
-            class='font-serif hover:underline hover:underline-offset-2'
-            href={link.href}
-          >
-            {link.text}
-          </a>
-        ))}
-      </div>
-    )
-  }
+  <div class='w-full flex justify-between items-center'>
+    {
+      navLinks.length > 0 && (
+        <div class='mb-4 flex flex-wrap gap-x-6 gap-y-1'>
+          {navLinks.map((link) => (
+            <a
+              class='font-serif hover:underline hover:underline-offset-2'
+              href={link.href}
+            >
+              {link.text}
+            </a>
+          ))}
+        </div>
+      )
+    }
+    <a
+      href='/feed.xml'
+      class='inline-flex gap-2 mb-4 font-serif hover:underline hover:underline-offset-2'
+    >
+      <Rss class='fill-current w-5 h-5' />
+      My Feed
+    </a>
+  </div>
   <div
     class:list={[
       'pt-6 flex flex-col gap-4 border-t border-dashed border-main',
@@ -48,7 +58,7 @@ const navLinks = siteConfig.footerNavLinks || []
     <p class='text-sm'>
       &copy; {new Date().getFullYear()}&nbsp;<a
         class='hover:underline hover:underline-offset-2'
-        href='/'>{siteConfig.title}</a
+        href={siteConfig.url}>{siteConfig.title}</a
       >. All rights reserved.
     </p>
   </div>

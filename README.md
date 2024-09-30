@@ -4,3 +4,4 @@
 
 - [ ] Remade the README
 - [ ] 404 and 500 pages
+- [ ] Localize the site

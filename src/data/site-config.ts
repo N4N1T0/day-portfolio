@@ -36,12 +36,16 @@ export type SiteConfig = {
   postsPerPage?: number;
   projectsPerPage?: number;
   author: string;
+  url: string;
 };
 
 const siteConfig: SiteConfig = {
   title: "Dayana Abuin Rios - Portfolio",
   subtitle: "Marketeer. Copywriter. Linguist. Tech Enthusiast.",
   description: "Welcome to my Portfolio - As Marketeer/Copywriter/Linguist",
+  url: process.env.CI
+    ? "https://www.dayanaabuinrios.marketing/"
+    : "http://localhost:4321",
   image: {
     src: "/dante-preview.jpg",
     alt: "Dayana Abuin Rios - Portfolio",
@@ -67,11 +71,11 @@ const siteConfig: SiteConfig = {
   footerNavLinks: [
     {
       text: "About",
-      href: "/about",
+      href: "/info/about",
     },
     {
       text: "Contact",
-      href: "/contact",
+      href: "/info/contact",
     },
   ],
   socialLinks: [
@@ -99,7 +103,7 @@ const siteConfig: SiteConfig = {
     ],
   },
   subscribe: {
-    title: "Subscribe to Dante Newsletter",
+    title: "Subscribe to My Newsletter",
     text: "One update per week. All the latest posts directly in your inbox.",
     formUrl: "#",
   },
