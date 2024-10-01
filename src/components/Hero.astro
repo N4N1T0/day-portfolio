@@ -2,6 +2,7 @@
 import { marked } from 'marked'
 import Button from '@/components/Button.astro'
 import siteConfig from '@/data/site-config'
+import { Image } from 'astro:assets'
 
 const hero = siteConfig.hero
 ---
@@ -19,11 +20,12 @@ const hero = siteConfig.hero
       )}
       {hero.image?.src && (
         <figure>
-          <img
+          <Image
             class='w-full'
             src={hero.image.src}
-            loading='lazy'
-            decoding='async'
+            width={1000}
+            height={800}
+            loading='eager'
             title={hero.image.alt || ''}
             alt={hero.image.alt || ''}
           />

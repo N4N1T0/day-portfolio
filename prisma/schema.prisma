@@ -15,8 +15,7 @@ datasource db {
 }
 
 model Subscriber {
-  id        String   @id
+  id        String   @id @default(cuid())
   email     String
-  createdAt DateTime
-  updatedAt DateTime
+  createdAt DateTime @default(now())
 }
