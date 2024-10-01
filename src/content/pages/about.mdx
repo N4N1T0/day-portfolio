@@ -4,11 +4,20 @@ seo:
   title: About Me
   description: Learn more about the person behind the website and embark on a journey of inspiration and shared experiences.
   image:
-    src: "/about.jpg"
+    src: '/about.jpg'
     alt: Dayana looking at the Univeristy of Ghent HQ
 ---
 
-![Dayana looking at the Univeristy of Ghent HQ](/about.jpg)
+import { Image } from 'astro:assets'
+
+<Image
+  src='/about.jpg'
+  alt=' Dayana looking at the Univeristy of Ghent HQ'
+  width={800}
+  height={600}
+  title=' Dayana looking at the Univeristy of Ghent HQ'
+  loading='eager'
+/>
 
 ## Dayana Abuin Rios - Language Technology and Marketing Specialist
 

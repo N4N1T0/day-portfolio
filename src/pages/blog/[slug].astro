@@ -46,6 +46,7 @@ const { Content } = await post.render()
     <header class='mb-8'>
       <h1
         class='text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight'
+        transition:name={title}
       >
         {title}
       </h1>
@@ -115,7 +116,8 @@ const { Content } = await post.render()
       </div>
     )
   }
-  <Subscribe class='my-16 sm:my-24' />
+
+  <!-- <Subscribe class='my-16 sm:my-24' /> -->
 </BaseLayout>
 
 <script>

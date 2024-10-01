@@ -46,14 +46,51 @@ const { class: className } = Astro.props
           name='email'
           id='email'
           class='w-full h-9 px-5 py-2 text-sm text-main bg-transparent border border-main rounded-full placeholder:text-main/60 focus:outline-none'
-          required=''
-          value=''
+          required
           placeholder='Your email'
         />
-        <Button type='submit' name='subscribe' class='w-full h-9 sm:w-auto'>
+        <Button
+          type='submit'
+          name='subscribe'
+          id='subscribe'
+          class='w-full h-9 sm:w-auto'
+        >
           Subscribe
         </Button>
       </form>
     </section>
   )
 }
+
+<script>
+  // This script handles the newsletter subscription form.
+  const form = document.getElementById('subscribe-form') as HTMLFormElement
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault()
+
+    const formData = new FormData(form)
+    const email = formData.get('email') as string
+
+    // When the form is submitted, it sends a POST request to
+    const response = await fetch('/api/subscriber.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email })
+    })
+
+    const body = await response.json()
+
+    // If the request fails, it shows an alert with an error message.
+    if (!body.success) {
+      alert(body.message)
+      return
+    }
+
+    // If the request is successful, it resets the form and shows an alert with a success message.
+    form.reset()
+    alert(body.message)
+  })
+</script>

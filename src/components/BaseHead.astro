@@ -1,6 +1,8 @@
 ---
 import siteConfig from '@/data/site-config'
 import '@/styles/global.css'
+import { Schema } from 'astro-seo-schema'
+import { GoogleFontsOptimizer } from 'astro-google-fonts-optimizer'
 
 export type Props = {
   title?: string
@@ -47,9 +49,8 @@ function formatCanonicalURL(url: string | URL) {
 <!-- Fonts -->
 <link rel='preconnect' href='https://fonts.googleapis.com' />
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-<link
-  href='https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap'
-  rel='stylesheet'
+<GoogleFontsOptimizer
+  url='https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap'
 />
 
 <!-- Site Author Info -->
@@ -59,7 +60,7 @@ function formatCanonicalURL(url: string | URL) {
 <meta name='publisher' content={siteConfig.author} />
 
 <!-- Low Priority Global Metadata -->
-<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+<link rel='icon' type='image/svg+xml' href='/favicon/favicon.ico' />
 <link rel='sitemap' href='/sitemap-index.xml' />
 <link rel='alternate' type='application/rss+xml' href='/rss.xml' title='RSS' />
 
@@ -94,3 +95,25 @@ function formatCanonicalURL(url: string | URL) {
     <meta name='twitter:image:alt' content={resolvedImage?.alt} />
   )
 }
+
+<!-- Schema.org -->
+<Schema
+  item={{
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    jobTitle: 'Marketeer. Copywriter. Linguist. Tech Enthusiast.',
+    alumniOf: [
+      'University of Ghent',
+      'University of Malaga',
+      'University of Habana'
+    ],
+    gender: 'Female',
+    email: 'dayana.abuinr@gmailcom',
+    birthDate: '1991-10-12',
+    description: 'Marketeer. Copywriter. Linguist. Tech Enthusiast.',
+    worksFor: 'Interprefy',
+    knowsLanguage: ['English', 'Spanish', 'French', 'German'],
+    name: siteConfig.title,
+    url: siteConfig.url
+  }}
+/>
