@@ -48,3 +48,7 @@
     }
     */
 }
+
+.quote-name {
+  @apply text-sm text-right font-serif;
+}
