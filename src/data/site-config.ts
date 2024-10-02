@@ -47,7 +47,7 @@ const siteConfig: SiteConfig = {
     ? "https://www.dayanaabuinrios.marketing/"
     : "http://localhost:4321",
   image: {
-    src: "/dante-preview.jpg",
+    src: "/Dayana-Profile.jpg",
     alt: "Dayana Abuin Rios - Portfolio",
   },
   headerNavLinks: [
