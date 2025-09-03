@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
 import vercel from "@astrojs/vercel/serverless";
 import robotsTxt from "astro-robots-txt";
-
+import keystatic from "@keystatic/astro";
 import playformCompress from "@playform/compress";
 
 const baseSite = process.env.CI
@@ -25,6 +25,7 @@ export default defineConfig({
     robotsTxt({
       sitemap: `${baseSite}/sitemap.xml`,
     }),
+    keystatic(),
     playformCompress(),
   ],
   output: "hybrid",
