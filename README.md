@@ -4,83 +4,184 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![Version](https://img.shields.io/badge/version-1.0.1-yellow.svg)
 
-this project is a small but performancely high and SEO enhanced portfolio for a Marketeer and Linguistic Engineer
+A high-performance, SEO-enhanced portfolio website for a Marketing and Linguistic Engineering professional, built with modern web technologies.
 
 ## Table of Contents
 
 - [About](#about)
+- [Technology Stack](#technology-stack)
 - [Features](#features)
 - [Installation](#installation)
+- [Development](#development)
 - [Contributing](#contributing)
+- [License](#license)
 - [Contact](#contact)
 
 ## About
 
-ProjectName is an open-source project that aims to help Marketeers and Linguistic Engineers. It is built using Astro with mny integrations, Alpine for a little bit of funcionality and personalization and helps to improve SEO and accessibility.
+Dayana's Portfolio is a modern, high-performance portfolio website designed for marketing and linguistic engineering professionals. Built with Astro and enhanced with multiple integrations, this project showcases best practices in web development, SEO optimization, and accessibility standards.
+
+## Technology Stack
+
+- **Framework**: [Astro](https://astro.build/) - Modern static site generator
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- **Interactivity**: [Alpine.js](https://alpinejs.dev/) - Lightweight JavaScript framework
+- **Content Management**: [Keystatic](https://keystatic.com/) - Git-based CMS
+- **Database**: [Prisma](https://www.prisma.io/) with PostgreSQL
+- **Deployment**: [Vercel](https://vercel.com/) - Serverless deployment platform
+- **Package Manager**: [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
 
 ## Features
 
-- **SEO enhanced**: Using may of the Astro features and integrations it will help to improve SEO and accessibility.
-- **Easy use Newsletter**: With the power of Alpine the newsletter is easy to use and almost instant.
-- **Theme Toggle**: with a little bit of JavaScript you can change the color scheme of the website.
-- **Localization**: Already localized in Spanish and English with oportunities for other languages.
+- **🚀 High Performance**: Built with Astro for lightning-fast loading times and optimal Core Web Vitals
+- **🔍 SEO Optimized**: Comprehensive SEO implementation with structured data, meta tags, and sitemap generation
+- **♿ Accessibility First**: WCAG compliant with proper semantic HTML and keyboard navigation
+- **📱 Responsive Design**: Mobile-first approach ensuring perfect display across all devices
+- **🌙 Dark/Light Theme**: Seamless theme switching with user preference persistence
+- **📧 Newsletter Integration**: Alpine.js-powered subscription system with instant feedback
+- **🌍 Internationalization**: Multi-language support (Spanish/English) with expansion capabilities
+- **📝 Content Management**: Keystatic CMS for easy content updates without technical knowledge
+- **🔧 Developer Experience**: TypeScript, ESLint, Prettier, and Husky for code quality
+- **📊 Analytics Ready**: Built-in page insights and performance monitoring
 
 ## Installation
 
-To use ProjectName, follow these steps to install:
+### Prerequisites
 
-1. Clone the repository:
+- Node.js 18+
+- pnpm (recommended) or npm
+- PostgreSQL database
 
-   ```bash
-   git clone https://github.com/username/ProjectName.git
-   ```
+### Quick Start
 
-2. Navigate into the project directory:
-
-   ```bash
-   cd ProjectName
-   ```
-
-3. Install the dependencies:
+1. **Clone the repository:**
 
    ```bash
-   npm install
+   git clone https://github.com/n4n1t0/day-portfolio.git
+   cd day-portfolio
    ```
 
-4. Add the postgresql database to the .env file:
+2. **Install dependencies:**
 
    ```bash
-   echo "DATABASE_URL=postgresql://username:password@localhost:5432/ProjectName" >> .env
+   pnpm install
    ```
 
-5. Initialize the Prisma database:
+3. **Environment setup:**
+
+   Create a `.env` file in the root directory:
 
    ```bash
-   npx prisma db push
+   cp .env.example .env
    ```
 
-6. Start the development server:
+   Add your database URL:
+
+   ```env
+   DATABASE_URL="postgresql://username:password@localhost:5432/day_portfolio"
+   ```
+
+4. **Database setup:**
 
    ```bash
-   npm run dev
+   pnpm prisma db push
    ```
+
+5. **Start development server:**
+
+   ```bash
+   pnpm dev
+   ```
+
+   The site will be available at `http://localhost:4321`
+
+### Build for Production
+
+```bash
+pnpm build
+pnpm preview
+```
+
+## Development
+
+### Available Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build
+- `pnpm astro` - Run Astro CLI commands
+- `pnpm prisma` - Run Prisma CLI commands
+
+### Content Management
+
+This project uses Keystatic for content management. Access the admin interface at:
+
+```
+http://localhost:4321/keystatic
+```
+
+### Code Quality
+
+The project includes:
+
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+- **Husky** - Git hooks for pre-commit checks
+- **TypeScript** - Type safety
 
 ## Contributing
 
-We welcome contributions! To contribute:
+Contributions are welcome! Please follow these steps:
 
-- Fork the repository.
-- Create a new branch (git checkout -b feature/AmazingFeature).
-- Make your changes and commit them (git commit -m 'Add some AmazingFeature').
-- Push to the branch (git push origin feature/AmazingFeature).
-- Open a pull request.
+1. **Fork the repository**
+2. **Create a feature branch:**
+
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+
+3. **Make your changes and commit:**
+
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+
+4. **Push to your branch:**
+
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+
+5. **Open a Pull Request**
+
+### Development Guidelines
+
+- Follow the existing code style
+- Write meaningful commit messages
+- Test your changes thoroughly
+- Update documentation as needed
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-Project Maintainer
-Adrian "Name" Alvarez - @n4n1t0 - <adrian.alvarezalonso1991@gmail.com>
+**Project Maintainer**
 
-## TODOS
+Adrian Alvarez (@n4n1t0)
 
-- [ ] 404 and 500 pages
-- [ ] Localize the site
+- Email: [adrian.alvarezalonso1991@gmail.com](mailto:adrian.alvarezalonso1991@gmail.com)
+- GitHub: [@n4n1t0](https://github.com/n4n1t0)
+
+**Portfolio Owner**
+
+Dayana Abuin Rios - Marketing & Linguistic Engineering Professional
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by Adrian "Nano" Alvarez</p>
+  <p>⭐ Star this repo if you found it helpful!</p>
+  <p>☕ <a href="https://buymeacoffee.com/n4n1t0">Buy me a coffee</a></p>
+</div>
