@@ -29,7 +29,6 @@
     "alpinejs": "^3.14.9",
     "astro": "^5.13.5",
     "astro-google-fonts-optimizer": "^0.2.2",
-    "astro-page-insight": "^0.10.2",
     "astro-robots-txt": "^1.0.0",
     "astro-seo-schema": "^5.1.0",
     "husky": "^9.1.7",
@@ -37,7 +36,6 @@
     "prisma": "^6.15.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "schema-dts": "^1.1.5",
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.12"
   },
