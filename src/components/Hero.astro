@@ -23,9 +23,10 @@ const hero = siteConfig.hero
           <Image
             class='w-full'
             src={hero.image.src}
-            width={1000}
-            height={800}
+            width={800}
+            height={600}
             loading='eager'
+            decoding='async'
             title={hero.image.alt || ''}
             alt={hero.image.alt || ''}
           />
