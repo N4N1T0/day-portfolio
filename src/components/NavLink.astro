@@ -6,7 +6,11 @@ type Props = HTMLAttributes<'a'>
 const { href, class: className, ...props } = Astro.props
 
 const { pathname } = Astro.url
-const isActive = href === pathname || href === pathname.replace(/\/$/, '')
+
+// Make the active check more precise
+const isHome = pathname === '/' && href === '/'
+const isActive =
+  isHome || (href && href !== '/' && pathname.startsWith(href.toString()))
 ---
 
 <a
