@@ -65,14 +65,6 @@ export default config({
             }),
             alt: fields.text({ label: "Alt Text" }),
           }),
-          pageType: fields.select({
-            label: "Page Type",
-            options: [
-              { label: "Website", value: "website" },
-              { label: "Article", value: "article" },
-            ],
-            defaultValue: "website",
-          }),
         }),
         content: fields.mdx({
           label: "Content",
@@ -125,14 +117,6 @@ export default config({
             }),
             alt: fields.text({ label: "Alt Text" }),
           }),
-          pageType: fields.select({
-            label: "Page Type",
-            options: [
-              { label: "Website", value: "website" },
-              { label: "Article", value: "article" },
-            ],
-            defaultValue: "website",
-          }),
         }),
         content: fields.mdx({
           label: "Content",
@@ -172,14 +156,6 @@ export default config({
               publicPath: "/public/",
             }),
             alt: fields.text({ label: "Alt Text" }),
-          }),
-          pageType: fields.select({
-            label: "Page Type",
-            options: [
-              { label: "Website", value: "website" },
-              { label: "Article", value: "article" },
-            ],
-            defaultValue: "website",
           }),
         }),
         content: fields.mdx({
