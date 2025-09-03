@@ -1,9 +1,9 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import alpinejs from "@astrojs/alpinejs";
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 import robotsTxt from "astro-robots-txt";
 import keystatic from "@keystatic/astro";
 import react from "@astrojs/react";
@@ -19,9 +19,6 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
     alpinejs(),
     react(),
     robotsTxt({
@@ -30,8 +27,11 @@ export default defineConfig({
     keystatic(),
     playformCompress(),
   ],
-  output: "hybrid",
+  output: "server",
   adapter: vercel({
     imageService: true,
   }),
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

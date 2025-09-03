@@ -22,7 +22,10 @@
     "@keystatic/core": "^0.5.48",
     "@playform/compress": "^0.2.0",
     "@prisma/client": "6.15.0",
+    "@tailwindcss/vite": "^4.1.12",
     "@types/alpinejs": "^3.13.11",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
     "alpinejs": "^3.14.9",
     "astro": "^5.13.5",
     "astro-google-fonts-optimizer": "^0.2.2",
@@ -36,7 +39,7 @@
     "react-dom": "^19.1.1",
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.3",
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
