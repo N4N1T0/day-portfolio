@@ -61,7 +61,7 @@ export default config({
             src: fields.image({
               label: "Image",
               directory: "./public/",
-              publicPath: "/public",
+              publicPath: "/",
             }),
             alt: fields.text({ label: "Alt Text" }),
           }),
@@ -71,7 +71,7 @@ export default config({
           options: {
             image: {
               directory: "./public/",
-              publicPath: "/public",
+              publicPath: "/",
             },
           },
         }),
@@ -113,7 +113,7 @@ export default config({
             src: fields.image({
               label: "Image",
               directory: "./public/",
-              publicPath: "/public",
+              publicPath: "/",
             }),
             alt: fields.text({ label: "Alt Text" }),
           }),
@@ -123,7 +123,7 @@ export default config({
           options: {
             image: {
               directory: "./public/",
-              publicPath: "/public",
+              publicPath: "/",
             },
           },
         }),
@@ -153,7 +153,7 @@ export default config({
             src: fields.image({
               label: "Image",
               directory: "./public",
-              publicPath: "/public/",
+              publicPath: "/",
             }),
             alt: fields.text({ label: "Alt Text" }),
           }),
@@ -163,7 +163,7 @@ export default config({
           options: {
             image: {
               directory: "./public/",
-              publicPath: "/public",
+              publicPath: "/",
             },
           },
         }),
