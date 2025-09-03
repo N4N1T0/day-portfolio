@@ -7,6 +7,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/prisma/*": ["./prisma/*"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
