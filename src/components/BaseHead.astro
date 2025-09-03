@@ -118,3 +118,11 @@ function formatCanonicalURL(url: string | URL) {
     url: siteConfig.url
   }}
 />
+
+<!-- Misc -->
+<link
+  rel='alternate'
+  type='application/rss+xml'
+  title="Your Site's Title"
+  href={new URL('rss.xml', Astro.site)}
+/>
