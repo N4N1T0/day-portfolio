@@ -37,6 +37,7 @@ export type SiteConfig = {
   projectsPerPage?: number;
   author: string;
   url: string;
+  localizeLanguages: string[];
 };
 
 const siteConfig: SiteConfig = {
@@ -68,6 +69,7 @@ const siteConfig: SiteConfig = {
       href: "/blog",
     },
   ],
+  localizeLanguages: ["en", "es", "fr", "de"],
   footerNavLinks: [
     {
       text: "About",
