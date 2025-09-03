@@ -18,11 +18,14 @@ const navLinks = siteConfig.headerNavLinks || []
         >
           <span class='menu-toggle-icon w-6 h-px relative bg-current' />
         </button>
-        <ul id='menu-items' class='menu flex gap-6'>
+        <ul
+          id='menu-items'
+          class='menu hidden md:flex flex-col md:flex-row absolute md:relative w-full md:w-auto left-0 top-0 pt-20 md:pt-0 px-6 md:px-0 bg-main md:bg-transparent gap-6 min-h-[100vh] md:min-h-0 z-20'
+        >
           {navLinks.map((link) => (
             <li class='py-1'>
               <NavLink
-                class='text-xl font-serif text-main hover:underline hover:underline-offset-2 hover:decoration-1 md:text-base'
+                class='text-xl font-serif text-main hover:underline hover:underline-offset-2 hover:decoration-1 md:text-base block'
                 target={link.text === 'Download CV' ? '_blank' : '_self'}
                 href={
                   link.text === 'Download CV'
@@ -46,49 +49,42 @@ const navLinks = siteConfig.headerNavLinks || []
 </nav>
 
 <style>
-  @media (max-width: 767px) {
-    .menu {
-      @apply invisible absolute -left-2.5 -top-2.5 z-20 max-w-64 flex-col gap-1 border border-dashed border-main bg-main px-3 pb-10 pt-16 opacity-0;
-      width: calc(100% + 1.25rem);
-    }
-    .menu.is-visible {
-      @apply visible opacity-100;
-      transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-    }
-    .menu-toggle-icon {
-      transition: width 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-    }
-    .menu-toggle.is-active .menu-toggle-icon {
-      @apply w-0;
-      transition: width 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .menu-toggle-icon:before,
-    .menu-toggle-icon:after {
-      @apply absolute left-1/2 top-0 h-px w-6 origin-center -translate-x-1/2 bg-current;
-      content: '';
-      transition:
-        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-        margin 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-    }
-    .menu-toggle-icon:before {
-      @apply -mt-1.5;
-    }
-    .menu-toggle-icon:after {
-      @apply mt-1.5;
-    }
-    .menu-toggle.is-active .menu-toggle-icon:before,
-    .menu-toggle.is-active .menu-toggle-icon:after {
-      @apply mt-0;
-      transition:
-        margin 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
-        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-    }
-    .menu-toggle.is-active .menu-toggle-icon:before {
-      @apply rotate-45;
-    }
-    .menu-toggle.is-active .menu-toggle-icon:after {
-      @apply -rotate-45;
-    }
+  .menu-toggle-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .menu-toggle-icon::before,
+  .menu-toggle-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-toggle-icon::before {
+    transform: translateY(-8px);
+  }
+
+  .menu-toggle-icon::after {
+    transform: translateY(8px);
+  }
+
+  .menu-toggle.is-active .menu-toggle-icon {
+    background-color: transparent;
+  }
+
+  .menu-toggle.is-active .menu-toggle-icon::before {
+    transform: rotate(45deg);
+  }
+
+  .menu-toggle.is-active .menu-toggle-icon::after {
+    transform: rotate(-45deg);
+  }
+
+  .menu.is-visible {
+    display: flex;
   }
 </style>
 
