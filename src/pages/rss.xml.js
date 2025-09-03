@@ -9,6 +9,8 @@ export async function GET(context) {
     title: siteConfig.title,
     description: siteConfig.description,
     site: context.site,
+    trailingSlash: false,
+    stylesheet: "/pretty-feed-v3.xsl",
     items: posts.map((item) => ({
       title: item.data.title,
       description: item.data.excerpt,
