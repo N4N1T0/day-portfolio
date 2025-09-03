@@ -8,6 +8,7 @@ import Subscribe from '@/components/Subscribe.astro'
 import siteConfig from '@/data/site-config'
 import { sortItemsByDateDesc } from '@/utils/data-utils'
 
+export const prerender = true
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
     sortItemsByDateDesc
@@ -19,6 +20,7 @@ type Props = { page: Page<CollectionEntry<'blog'>> }
 
 const { page } = Astro.props
 const blog = page.data
+console.log('🚀 ~ blog:', blog)
 ---
 
 <BaseLayout

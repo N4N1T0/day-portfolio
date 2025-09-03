@@ -6,8 +6,8 @@ import FormattedDate from '@/components/FormattedDate.astro'
 import PostPreview from '@/components/PostPreview.astro'
 import Subscribe from '@/components/Subscribe.astro'
 import { sortItemsByDateDesc } from '@/utils/data-utils'
-import { slugify } from '@/utils/common-utils'
 
+export const prerender = true
 export async function getStaticPaths() {
   const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
     sortItemsByDateDesc
