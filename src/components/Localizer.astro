@@ -1,0 +1,22 @@
+---
+import siteConfig from '@/data/site-config'
+import LocalizerLinks from './LocalizerLinks.astro'
+---
+
+<data aria-roledescription='localize' class='flex'>
+  {
+    siteConfig.localizeLanguages.map((item, index) => {
+      return (
+        <LocalizerLinks
+          class='text-xl font-serif text-main hover:underline hover:underline-offset-2 hover:decoration-1 md:text-base'
+          href={`/${item}/`}
+          aria-level={
+            index === siteConfig.localizeLanguages.length - 1 ? 'last' : 'none'
+          }
+        >
+          {item.toUpperCase()}
+        </LocalizerLinks>
+      )
+    })
+  }
+</data>
