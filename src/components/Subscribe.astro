@@ -31,12 +31,11 @@ const { class: className } = Astro.props
         </p>
       )}
       <form
-        action={subscribe.formUrl}
-        method='post'
+        x-data='useForm'
+        x-on:submit.prevent='post'
         id='subscribe-form'
         name='subscribe-form'
         class='w-full max-w-xl flex flex-col gap-3.5 sm:flex-row'
-        target='_blank'
       >
         <label for='email' class='sr-only'>
           Email Address
@@ -57,40 +56,60 @@ const { class: className } = Astro.props
         >
           Subscribe
         </Button>
+        {/* Toast Notification */}
+        <div
+          x-show='showToast'
+          x-transition:enter='transition ease-out duration-300'
+          x-transition:enter-start='opacity-0 transform -translate-y-5'
+          x-transition:enter-end='opacity-100 transform translate-y-0'
+          x-transition:leave='transition ease-in duration-300'
+          x-transition:leave-start='opacity-100 transform translate-y-0'
+          x-transition:leave-end='opacity-0 transform -translate-y-5'
+          x-bind:class="showToast ? 'show' : ''"
+          class='fixed top-5 left-5 w-fit h-auto p-3 flex items-center justify-center bg-main border-dashed border border-gray-900 max-w-xs'
+          x-init="$watch('showToast', value => {
+                if (value) {
+                    setTimeout(() => showToast = false, 300);
+                }
+            })"
+        >
+          <span x-text='message' />
+        </div>
       </form>
     </section>
   )
 }
 
 <script>
-  // This script handles the newsletter subscription form.
-  const form = document.getElementById('subscribe-form') as HTMLFormElement
+  import Alpine from 'alpinejs'
 
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault()
-
-    const formData = new FormData(form)
-    const email = formData.get('email') as string
-
-    // When the form is submitted, it sends a POST request to
-    const response = await fetch('/api/subscriber.json', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('useForm', () => ({
+      message: 'caacaccacaa',
+      showToast: false,
+      data() {
+        return this.$el.querySelector('#email') as HTMLInputElement
       },
-      body: JSON.stringify({ email })
-    })
+      async post() {
+        try {
+          const response = await fetch('/api/subscriber.json', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: this.data().value })
+          })
 
-    const body = await response.json()
+          const body = await response.json()
 
-    // If the request fails, it shows an alert with an error message.
-    if (!body.success) {
-      alert(body.message)
-      return
-    }
+          this.data().value = ''
 
-    // If the request is successful, it resets the form and shows an alert with a success message.
-    form.reset()
-    alert(body.message)
+          this.message = body.message
+          this.showToast = true
+        } catch (error) {
+          alert('There was an error. Please try again.')
+        }
+      }
+    }))
   })
 </script>
