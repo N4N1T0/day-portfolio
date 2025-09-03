@@ -7,6 +7,8 @@ export const POST: APIRoute = async ({ request }) => {
   const body = await request.json();
   const email: string = body.email;
 
+  console.log(email);
+
   if (!email) {
     return new Response(
       JSON.stringify({
