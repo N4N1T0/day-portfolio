@@ -28,6 +28,7 @@ export default config({
         excerpt: fields.text({
           label: "Excerpt",
           description: "A brief description of the blog post",
+          validation: { isRequired: true },
         }),
         publishDate: fields.date({
           label: "Publish Date",
@@ -62,8 +63,12 @@ export default config({
               label: "Image",
               directory: "./public/",
               publicPath: "/",
+              validation: { isRequired: true },
             }),
-            alt: fields.text({ label: "Alt Text" }),
+            alt: fields.text({
+              label: "Alt Text",
+              validation: { isRequired: true },
+            }),
           }),
         }),
         content: fields.mdx({
