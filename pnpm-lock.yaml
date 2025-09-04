@@ -37,9 +37,6 @@ importers:
       "@playform/compress":
         specifier: ^0.2.0
         version: 0.2.0(@types/node@22.13.14)(@vercel/functions@2.2.13)(idb-keyval@6.2.2)(jiti@2.5.1)(rollup@4.50.0)(typescript@5.6.2)(yaml@2.8.1)
-      "@prisma/client":
-        specifier: 6.15.0
-        version: 6.15.0(prisma@6.15.0(magicast@0.3.5)(typescript@5.6.2))(typescript@5.6.2)
       "@tailwindcss/vite":
         specifier: ^4.1.12
         version: 4.1.12(vite@6.3.5(@types/node@22.13.14)(jiti@2.5.1)(lightningcss@1.30.1)(terser@5.42.0)(yaml@2.8.1))
@@ -1658,21 +1655,6 @@ packages:
       {
         integrity: sha512-cjRcaj6b8XZMS+N51In78EuD9e0x0M3gYxi2g+qUGk1iya2uxcS+aSrXxfBUZueOjxADQwpyS4zLEhlbHCGcDA==,
       }
-
-  "@prisma/client@6.15.0":
-    resolution:
-      {
-        integrity: sha512-wR2LXUbOH4cL/WToatI/Y2c7uzni76oNFND7+23ypLllBmIS8e3ZHhO+nud9iXSXKFt1SoM3fTZvHawg63emZw==,
-      }
-    engines: { node: ">=18.18" }
-    peerDependencies:
-      prisma: "*"
-      typescript: ">=5.1.0"
-    peerDependenciesMeta:
-      prisma:
-        optional: true
-      typescript:
-        optional: true
 
   "@prisma/config@6.15.0":
     resolution:
@@ -9480,11 +9462,6 @@ snapshots:
       "@types/node": 22.13.14
       deepmerge-ts: 7.1.5
       fast-glob: 3.3.3
-
-  "@prisma/client@6.15.0(prisma@6.15.0(magicast@0.3.5)(typescript@5.6.2))(typescript@5.6.2)":
-    optionalDependencies:
-      prisma: 6.15.0(magicast@0.3.5)(typescript@5.6.2)
-      typescript: 5.6.2
 
   "@prisma/config@6.15.0(magicast@0.3.5)":
     dependencies:
