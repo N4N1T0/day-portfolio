@@ -13,6 +13,7 @@ const seoSchema = z.object({
 });
 
 const pages = defineCollection({
+  type: "content",
   schema: z.object({
     title: z.string(),
     seo: seoSchema.optional(),
@@ -20,6 +21,7 @@ const pages = defineCollection({
 });
 
 const blog = defineCollection({
+  type: "content",
   schema: z.object({
     title: z.string(),
     excerpt: z.string().optional(),
@@ -32,6 +34,7 @@ const blog = defineCollection({
 });
 
 const projects = defineCollection({
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
