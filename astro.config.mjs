@@ -28,6 +28,10 @@ export default defineConfig({
     playformCompress(),
   ],
   output: "server",
+  viewTransitions: true,
+  legacy: {
+    collectionsBackwardsCompat: true,
+  },
   adapter: vercel({
     imageService: true,
   }),
