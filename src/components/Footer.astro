@@ -55,11 +55,21 @@ const navLinks = siteConfig.footerNavLinks || []
         </div>
       )
     }
-    <p class='text-sm'>
-      &copy; {new Date().getFullYear()}&nbsp;<a
-        class='hover:underline hover:underline-offset-2'
-        href={siteConfig.url}>{siteConfig.title}</a
-      >. All rights reserved.
-    </p>
+    <div class='text-sm'>
+      <p>
+        &copy; {new Date().getFullYear()}&nbsp;<a
+          class='hover:underline hover:underline-offset-2'
+          href={siteConfig.url}>{siteConfig.title}</a
+        >. All rights reserved.
+      </p>
+      <p>
+        Built by <a
+          class='hover:underline hover:underline-offset-2'
+          href='https://www.ohmuonlineoperations.com/'
+          target='_blank'
+          rel='noopener noreferrer'>Ohmu Online Operations</a
+        >.
+      </p>
+    </div>
   </div>
 </footer>
